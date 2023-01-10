@@ -1,0 +1,12 @@
+sealedSecrets:
+  fullnameOverride: sealed-secrets-controller
+  # https://github.com/bitnami-labs/sealed-secrets/tree/main/helm/sealed-secrets#configuration-and-installation-details
+  # use these options for running the operator in an Openshift namespace
+  podSecurityContext: 
+    enabled: false 
+  containerSecurityContext: 
+    enabled: false
+# pass the sealing cert and private key from local files using --set-file in the helm command
+sealing:
+  crt:
+  key:
